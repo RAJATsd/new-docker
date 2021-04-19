@@ -6,6 +6,8 @@ services:
 before_install: 
   - docker build -t mydockerreact -f Dockerfile.dev .
 
-script :
+script:
   - docker run mydockerreact npm run test -- --coverage  
 
+on:
+  branch: master
