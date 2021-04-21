@@ -3,7 +3,7 @@ sudo: required
 services: 
   - docker    
 
-befor_script: 
+before_script: 
   - docker build -t mydockerreact -f Dockerfile.dev .
 
 script:
