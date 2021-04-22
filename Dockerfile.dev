@@ -5,8 +5,9 @@ WORKDIR /app
 COPY package.json .
 
 RUN npm install 
-RUN chmod -R a+rwx node_modules
+# RUN chmod -R a+rwx node_modules
 
-COPY . .
+COPY public /app/public
+COPY src /app/src
 
 CMD ["npm","run","start"]
